@@ -1,5 +1,6 @@
 import abc
 
+
 class Classifier(abc.ABC):
 
     def __init__(self, dataset):

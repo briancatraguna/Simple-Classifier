@@ -1,6 +1,8 @@
 import abc
 
+
 class SplitterDataset(abc.ABC):
+
     def __init__(self, test_size):
         self.X_train = None
         self.X_test = None

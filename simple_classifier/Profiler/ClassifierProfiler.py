@@ -1,4 +1,5 @@
 class ClassifierProfiler:
+
     def __init__(self, classifiers, profilers, display):
         self.classifiers = classifiers
         self.profilers = profilers

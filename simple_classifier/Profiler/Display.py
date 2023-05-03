@@ -1,4 +1,5 @@
 class Display:
+
     def dump(self):
         # Dump data to console
         pass

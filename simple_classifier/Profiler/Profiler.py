@@ -1,5 +1,6 @@
 class Profiler:
-    def __init__(self, metrics: [str]):
+
+    def __init__(self, metrics: list[str]):
         self.metrics = metrics
 
     def run(self):
