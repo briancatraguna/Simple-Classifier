@@ -1,6 +1,3 @@
-from simple_classifier.Classifiers.ClassifierProfiler import ClassifierProfiler
-
-
 class Display:
     def dump(self):
         # Dump data to console
