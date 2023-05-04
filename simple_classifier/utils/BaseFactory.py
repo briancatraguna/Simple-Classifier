@@ -2,7 +2,7 @@ class BaseFactory:
     registry = {}
 
     @classmethod
-    def register(cls, name):
+    def register(cls, name: str):
 
         def inner_wrapper(wrapped_class):
             if name in cls.registry:
@@ -14,7 +14,7 @@ class BaseFactory:
         return inner_wrapper
 
     @classmethod
-    def create_instance(cls, name, **kwargs):
+    def create_instance(cls, name: str, **kwargs):
         if name not in cls.registry:
             raise ValueError(
                 f"No {cls.__name__.lower()} registered for {name}")

@@ -3,7 +3,7 @@ import abc
 
 class SplitterDataset(abc.ABC):
 
-    def __init__(self, test_size):
+    def __init__(self, test_size: float):
         self.X_train = None
         self.X_test = None
         self.y_train = None

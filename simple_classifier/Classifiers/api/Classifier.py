@@ -1,9 +1,11 @@
 import abc
 
+from simple_classifier.SplitterDataset.api.SplitterDataset import SplitterDataset
+
 
 class Classifier(abc.ABC):
 
-    def __init__(self, dataset):
+    def __init__(self, dataset: SplitterDataset):
         self.dataset = dataset
 
     def fit(self):
