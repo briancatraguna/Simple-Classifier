@@ -4,5 +4,6 @@ from simple_classifier.SplitterDataset.api.SplitterDataset import SplitterDatase
 
 @SplitterDatasetFactory.register("wine")
 class WineDataset(SplitterDataset):
+
     def load_data(self):
         pass

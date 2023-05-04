@@ -4,6 +4,7 @@ from simple_classifier.SplitterDataset.api.SplitterDataset import SplitterDatase
 
 @SplitterDatasetFactory.register("diabetes")
 class DiabetesDataset(SplitterDataset):
+
     def load_data(self):
         # Load diabetes dataset and split into train and test sets
         pass

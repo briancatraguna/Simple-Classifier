@@ -4,5 +4,6 @@ from simple_classifier.SplitterDataset.api.SplitterDataset import SplitterDatase
 
 @SplitterDatasetFactory.register("iris")
 class IrisDataset(SplitterDataset):
+
     def load_data(self):
         pass
