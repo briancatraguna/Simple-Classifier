@@ -1,6 +1,6 @@
 import abc
 
-from simple_classifier.SplitterDataset.api.SplitterDataset import SplitterDataset
+from src.SplitterDataset.api.SplitterDataset import SplitterDataset
 
 
 class Classifier(abc.ABC):
