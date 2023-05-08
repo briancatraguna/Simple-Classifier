@@ -7,6 +7,4 @@ from sklearn.datasets import load_iris
 class IrisDataset(SplitterDataset):
 
     def load_data(self):
-        # Load iris dataset and split into train and test sets
-        X, y = load_iris(return_X_y=True)
-        self.X_train, self.X_test, self.y_train, self.y_test = self.splitter.split_data(X, y)
+        return load_iris(return_X_y=True)

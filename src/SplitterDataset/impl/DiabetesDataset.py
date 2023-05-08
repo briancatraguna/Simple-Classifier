@@ -7,8 +7,6 @@ from sklearn.datasets import load_diabetes
 class DiabetesDataset(SplitterDataset):
 
     def load_data(self):
-        # Load diabetes dataset and split into train and test sets
-        X, y = load_diabetes(return_X_y=True)
-        self.X_train, self.X_test, self.y_train, self.y_test = self.splitter.split_data(X, y)
+        return load_diabetes(return_X_y=True)
 
 
