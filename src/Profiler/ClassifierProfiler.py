@@ -1,6 +1,6 @@
-from simple_classifier.Classifiers.api.Classifier import Classifier
-from simple_classifier.Profiler.Profiler import Profiler
-from simple_classifier.Profiler.Display import Display
+from src.Classifier.api.Classifier import Classifier
+from src.Profiler.Profiler import Profiler
+from src.Profiler.Display import Display
 
 
 class ClassifierProfiler:
@@ -12,11 +12,11 @@ class ClassifierProfiler:
         self.display = display
 
     def train(self):
-        # Train all classifiers on dataset
+        # Train all Classifier on dataset
         pass
 
     def profile_classifiers(self):
-        # Run all profilers on all classifiers and display results
+        # Run all Profiler on all Classifier and display results
         pass
 
     def display_results(self):
