@@ -1,5 +1,5 @@
-from simple_classifier.Classifiers.factory.ClassifierFactory import ClassifierFactory
-from simple_classifier.Classifiers.api.Classifier import Classifier
+from src.Classifier.factory.ClassifierFactory import ClassifierFactory
+from src.Classifier.api.Classifier import Classifier
 
 
 @ClassifierFactory.register('randomforest')

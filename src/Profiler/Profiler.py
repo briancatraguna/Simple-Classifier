@@ -4,5 +4,5 @@ class Profiler:
         self.metrics = metrics
 
     def run(self):
-        # Run profiler on given classifier
+        # Run Profiler on given Classifier
         pass
