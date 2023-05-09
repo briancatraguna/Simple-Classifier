@@ -1,14 +1,30 @@
-from simple_classifier.Splitter.Splitter import Splitter
 from sklearn.model_selection import train_test_split
 
+from simple_classifier.Splitter.Splitter import Splitter
 
-@Splitter.register("Percentage_split")
+
+@Splitter.register("percentage_split")
 class PercentageSplitter(Splitter):
     """
     This class will cover split by percentage, as well as split by Random state. If you don't want to use random state
     set random_state = None. This will apply for every other subclasses also.
 
+    Returns:
+    --------
+    X_train : array-like or sparse matrix of shape (n_train_samples, n_features)
+    The training input data.
+
+    X_test : array-like or sparse matrix of shape (n_test_samples, n_features)
+    The testing input data.
+
+    y_train : array-like of shape (n_train_samples,)
+    The training target labels.
+
+    y_test : array-like of shape (n_test_samples,)
+    The testing target labels.
+
     """
+
     def split_data(self, X, y):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=self.test_size,
                                                             random_state=self.random_state, shuffle=False,
@@ -16,7 +32,7 @@ class PercentageSplitter(Splitter):
         return X_train, X_test, y_train, y_test
 
 
-@Splitter.register("Percentage_split_w_shuffle")
+@Splitter.register("percentage_split_w_shuffle")
 class PercentageShuffleSplitter(Splitter):
 
     def split_data(self, X, y):
@@ -25,7 +41,7 @@ class PercentageShuffleSplitter(Splitter):
         return X_train, X_test, y_train, y_test
 
 
-@Splitter.register("Percentage_split_w_stratify")
+@Splitter.register("percentage_split_w_stratify")
 class PercentageStratifiedSplitter(Splitter):
     """
     If stratify is not None, the function uses the target variable y to group the shuffled data by class. It then
@@ -40,3 +56,25 @@ class PercentageStratifiedSplitter(Splitter):
         return X_train, X_test, y_train, y_test
 
 
+@Splitter.register("percentage_split_w_cross_validation")
+class PercentageCrossValSplitter(Splitter):
+    """
+    Splits a dataset into a training set, a validation set, and a testing set using scikit-learn's
+    train_test_split() function.
+
+    Returns:
+    --------
+    X_val : array-like or sparse matrix of shape (n_val_samples, n_features)
+    The validation input data.
+
+    y_val : array-like of shape (n_val_samples,)
+    The validation target labels.
+
+    """
+
+    def split_data(self, X, y):
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=self.test_size,
+                                                            random_state=self.random_state)
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=self.test_size,
+                                                          random_state=self.random_state)
+        return X_train, X_test, y_train, y_test, X_val, y_val
