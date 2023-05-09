@@ -18,17 +18,26 @@ class PercentageSplitter(Splitter):
     """
 
     def split_data(self, X, y):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=self.test_size,
-                                                            random_state=self.random_state, shuffle=False,
-                                                            stratify=None)
+        X_train, X_test, y_train, y_test = train_test_split(
+            X,
+            y,
+            test_size=self.test_size,
+            random_state=self.random_state,
+            shuffle=False,
+            stratify=None)
         return X_train, X_test, y_train, y_test
 
 
 class PercentageShuffleSplitter(Splitter):
 
     def split_data(self, X, y):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=self.test_size,
-                                                            random_state=self.random_state, shuffle=True, stratify=None)
+        X_train, X_test, y_train, y_test = train_test_split(
+            X,
+            y,
+            test_size=self.test_size,
+            random_state=self.random_state,
+            shuffle=True,
+            stratify=None)
         return X_train, X_test, y_train, y_test
 
 
@@ -40,8 +49,13 @@ class PercentageStratifiedSplitter(Splitter):
     """
 
     def split_data(self, X, y):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=self.test_size,
-                                                            random_state=self.random_state, shuffle=True, stratify=y)
+        X_train, X_test, y_train, y_test = train_test_split(
+            X,
+            y,
+            test_size=self.test_size,
+            random_state=self.random_state,
+            shuffle=True,
+            stratify=y)
         return X_train, X_test, y_train, y_test
 
 
@@ -56,8 +70,11 @@ class PercentageCrossValSplitter(Splitter):
     """
 
     def split_data(self, X, y):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=self.test_size,
-                                                            random_state=self.random_state)
-        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=self.test_size,
-                                                          random_state=self.random_state)
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=self.test_size, random_state=self.random_state)
+        X_train, X_val, y_train, y_val = train_test_split(
+            X_train,
+            y_train,
+            test_size=self.test_size,
+            random_state=self.random_state)
         return X_train, X_test, y_train, y_test, X_val, y_val

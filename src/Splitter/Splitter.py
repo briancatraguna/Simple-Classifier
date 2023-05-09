@@ -5,6 +5,7 @@ class Splitter(abc.ABC):
     """
     A class that splits the dataset into train and test data
     """
+
     def __init__(self, test_size: float, random_state: int, shuffle: bool):
         """
         :param test_size: a fraction that defines the percentage of the test data split
