@@ -3,6 +3,7 @@ from src.SplitterDataset.api.SplitterDataset import SplitterDataset
 
 from sklearn.datasets import load_wine
 
+
 @SplitterDatasetFactory.register("wine")
 class WineDataset(SplitterDataset):
 
