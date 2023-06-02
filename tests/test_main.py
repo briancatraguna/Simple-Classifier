@@ -12,6 +12,7 @@ def prepare_test_environment():
     current_path = os.path.abspath(__file__)
     root_directory = go_up_one_level(current_path)
     os.chdir(root_directory)
+    os.environ['PYTHONPATH'] = f"{os.environ.get('PYTHONPATH', '')}:{root_directory}"
 
 
 @pytest.mark.integration_test
