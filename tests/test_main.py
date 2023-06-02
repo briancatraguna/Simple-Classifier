@@ -14,7 +14,7 @@ def prepare_test_environment():
     os.chdir(root_directory)
 
 
-@pytest.mark.interation_test
+@pytest.mark.integration_test
 def test_cli_execution():
     prepare_test_environment()
     samples_directory = os.path.join(os.getcwd(), "samples")
