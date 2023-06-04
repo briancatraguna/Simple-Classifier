@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/8Z1lxzU_)
-
 # Simple-Classifier
 
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fgabe-teaching-nyu-tandon%2Ffinalprojects23-simpleclassifier%2Fbadge%3Fref%3Dmain%26token%3D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&style=flat)](https://actions-badge.atrox.dev/gabe-teaching-nyu-tandon/finalprojects23-simpleclassifier/goto?ref=main&token=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)
