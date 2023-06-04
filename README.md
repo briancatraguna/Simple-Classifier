@@ -1,6 +1,6 @@
 # Simple-Classifier
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fgabe-teaching-nyu-tandon%2Ffinalprojects23-simpleclassifier%2Fbadge%3Fref%3Dmain%26token%3D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&style=flat)](https://actions-badge.atrox.dev/gabe-teaching-nyu-tandon/finalprojects23-simpleclassifier/goto?ref=main&token=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)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fbriancatraguna%2FSimple-Classifier%2Fbadge%3Fref%3Dmain&style=for-the-badge)](https://actions-badge.atrox.dev/briancatraguna/Simple-Classifier/goto?ref=main)
 
 Introducing “Simple Classifier”, a user-friendly library designed for individuals new to machine learning and seeking an accessible way to explore and experiment with various classification algorithms. This library streamlines the entire machine learning process, from data preparation and preprocessing to training, evaluation, and comparison of different algorithms, without requiring extensive coding knowledge.
 
